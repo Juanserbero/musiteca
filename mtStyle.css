@@ -1,0 +1,234 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+header{
+    background: #213857;
+    width: 100%;
+    height: 20%;
+    margin: auto;
+
+}
+
+.head1{
+    font-size: 90px;
+    letter-spacing: 50px;
+    text-align: center;
+    font-family: "Castellar";
+}
+
+header nav{
+    background: #1A4578;
+    overflow: hidden;
+}
+
+header nav ul{
+    list-style: none;
+}
+
+header nav ul li{
+    float:left;
+}
+
+header nav ul li a{
+    padding:10px 20px;
+    display: block;
+    color: #E6DFD5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover{
+    background:#001834;
+}
+
+.search{
+    font-size: 17px;
+    letter-spacing: 1px;
+    margin-top: 9px;
+    padding-right: 160px;
+    margin-left: 40%;
+    font-family: "Lucida Bright";
+    background: #E6DFD5;
+    font-style: italic;
+}
+
+.mainCont {
+    background-color: #C3D1DA;
+    width: 100%;
+    height: 70%;
+    margin: auto;
+
+}
+
+.artCont, .albCont, .genCont{
+    background-color: #C3D1DA;
+    width: 80%;
+    height: 100%;
+    max-height: 600px;
+    float: left;
+}
+
+.head2 {
+    width: 90%;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: "Times New Roman";
+    color: #001834;
+}
+
+.headSelect{
+    font-size: 50px;
+}
+
+.AdmModHead {
+    font-size: 30px;
+    font-family: "Lucida Bright";
+    text-align: center;
+}
+
+/* Seccion Login */
+
+.loginCont{
+    background: #213857;
+    position: relative;
+    top:10%;
+    width: 28%;
+    margin-left: 30%;
+    padding-bottom: 40px;
+    box-shadow:10px 10px 10px 0px  #001834;
+}
+
+.headLogin, .headAdd{
+    width: 90%;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    max-width: 1200px;
+    font-family: "Times New Roman";
+    color:#C3D1DA;
+}
+
+.nameLog, .passLog{
+    margin-left: 25%;
+    color:#89A1C5;
+}
+
+
+.logInputs{
+    background: #89A1C5;
+    margin-left: 25%;
+}
+
+.logSubmit{
+    background: #89A1C5;
+    margin-left: 36%;
+    padding: 5px;
+    font-family: "Lucida Bright";
+    color:#001834;
+    text-decoration: none;
+    border: #001834 1px solid;
+}
+
+.logSubmit:hover{
+    background-color: #001834;
+    color: #89A1C5;
+    cursor: pointer;
+}
+
+/* Para los agregar */
+
+.addP{
+    margin-left: 25%;
+    color:#89A1C5;
+}
+
+.albTypeLP{
+    margin-left: 25%;
+    color:#89A1C5;
+}
+
+.albTypeEP{
+    color:#89A1C5;
+}
+
+.addInputs{
+    background: #89A1C5;
+    margin-left: 25%;
+}
+
+.present{
+    background-color: #C3D1DA;
+    width: 90%;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    max-width: 1200px;
+    font-family: "Lucida Bright";
+    color: #001834;
+}
+
+.addAdm{
+    margin-left: 12%;
+    position: relative;
+    top: 10%;
+    padding: 10px;
+    text-decoration: none;
+    border: 3px #001834 solid;
+    font-family: "Rockwell";
+    font-size: 20px;
+    background:#89A1C5;
+    color: #001834;
+}
+
+.addAdm:hover{
+    background-color: #1A4578;
+}
+
+.addCont{
+    background: #213857;
+    position: relative;
+    top: 10%;
+    width: 35%;
+    margin-left: 30%;
+    padding-bottom: 40px;
+    box-shadow:10px 10px 10px 0px  #001834;
+}
+
+/* Footer */
+
+footer{
+    height: 10%;
+    background-color: #001834;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.SetOrAdm{
+    float: left;
+    padding:10px 20px;
+    position: relative;
+    top:20%;
+    display: block;
+    background: #213857;
+    color: #E6DFD5;
+    margin-left: 20px;
+    font-family: "Lucida Bright";
+    text-decoration: none;
+    border: 2.5px solid black;
+}
+
+.SetOrAdm:hover{
+    background:#001834;
+}
+
+.lat{
+    background-color:#89A1C5;
+    width: 20%;
+    height: 100%;
+    float:left;
+    margin: auto;
+}
