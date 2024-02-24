@@ -44,8 +44,6 @@ try {
             <input type="date" class="addInputs" name = "fecha">
             <p class="addP">Duracion del album: </p>
             <input type="text" class="addInputs" name = "duracion">
-            <p class="addP">Cantidad de canciones: </p>
-            <input type="number" class="addInputs" name = "cantidad_canciones">
             <p class="addP">Tipo de album:</p>
             <input type="text" class="addInputs" name = "tipo">
             <br><br>

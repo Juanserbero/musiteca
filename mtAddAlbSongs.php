@@ -17,6 +17,8 @@
                 <h2 class="headLogin">Agregar una nueva canción: </h2>
                 <p class="addP">Nombre: </p>
                 <input type="text" class="addInputs" name="nombre">
+                <p class="addP">Número de canción: </p>
+                <input type="text" class="addInputs" name="numero">
                 <p class="addP">Duración: </p>
                 <input type="text" class="addInputs" name="duracion">
                 <p class="addP">Género: </p>
@@ -24,7 +26,7 @@
                 <p class="addP">Tonalidad: </p>
                 <input type="text" class="addInputs" name="tono">
                 <p class="addP">Letra: </p>
-                <input type="text" class="addInputs" name="letra">
+                <textarea cols="30" rows="2" class="addInputs"></textarea>
                 <p class="addP">Descripción: </p>
                 <input type="text" class="addInputs" name="descripcion">
                 <br><br>
