@@ -41,19 +41,21 @@ try {
 
                 <?php foreach ($resultado as $r) : ?>
                     <div class="chapter flex" style="align-items: center;">
-                        <h4 onclick="loadArt(<?php echo $r['id']; ?>)" style="flex-grow: 1; cursor: pointer;"><?php echo $r['nombre']; ?></h4>
+                        <h4 class="listElem" onclick="loadArt(<?php echo $r['id']; ?>)" style="flex-grow: 1; cursor: pointer; background: white; margin:2%; padding:3px;border: #001834 solid 2px;"><?php echo $r['nombre']; ?></h4>
                     </div>
                 <?php endforeach ?>
 
             </aside>
         </section>
         <section class="artCont">
-            <h3 id="nombreArtista"class="headSelect"><?php if ($resultado) {
+            <h3 id="nombreArtista"class="headSelect" style="margin:1%"><?php if ($resultado) {
                                         echo $resultado[0]['nombre'];
                                     }    ?>
             </h3>
-                                    
-
+            <p id="fechaInicioArtista" style="margin:2%">fecha X</p>
+            <p id="paisArtista" style="margin:2%">pais X</p>
+            <p id="generoArtista" style="margin:2%">genero X</p>
+            <p id="biografiaInicioArtista" style="margin:2%; max-width: 100% ";>biografia X</p>
         </section>
     </section>
     <footer>

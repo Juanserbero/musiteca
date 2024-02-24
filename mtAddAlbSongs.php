@@ -31,7 +31,7 @@
                 <input type="text" class="addInputs" name="descripcion">
                 <br><br>
                 <input type="submit" class="logSubmit" value="Guardar y otra">
-                <a href="mtAdmin.php" class="logSubmit">Finalizar</a>
+                <a href="mtAdmin.php" class="logSubmit" style="margin:2%; margin-left: 18%; font-size:14px">Finalizar</a>
             </form>
         </section>
         <footer>

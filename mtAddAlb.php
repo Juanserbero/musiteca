@@ -47,8 +47,7 @@ try {
             <p class="addP">Tipo de album:</p>
             <input type="text" class="addInputs" name = "tipo">
             <br><br>
-            <input type="submit" class="logSubmit" value="Guardar">
-            <a href="mtAddAlbSongs.php" class="logSubmit">Agregar canciones</a>
+            <input type="submit" class="logSubmit" style="margin-left:24%" value="Guardar y agregar canciones">
         </form>
     </section>
     <footer>

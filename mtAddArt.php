@@ -23,6 +23,8 @@
                 <input type="text" class="addInputs" name="pais">
                 <p class="addP">Genero musical principal: </p>
                 <input type="text" class="addInputs" name="genero">
+                <p class="addP">Biografía: </p>
+                <textarea cols="30" rows="2" class="addInputs"></textarea>
                 <br><br>
                 <input type="submit" class="logSubmit" value="Guardar">
             </form>
