@@ -1,7 +1,7 @@
 <?php
 include './php/conexion.php';
 try {
-    // Consulta para obtener los libros de la tabla 'libro'
+    // Consulta para obtener los libros de la tabla 'artista'
     $sql_leer = 'SELECT id, nombre, fecha, pais, genero FROM artista;';
     $gsent = $pdo->prepare($sql_leer);
     $gsent->execute();
