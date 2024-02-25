@@ -12,7 +12,7 @@
                 <h4 class="AdmModHead">Modo Administrador</h4>
             </nav>
         </header>
-        <section class="mainCont">
+        <section class="mainCont" style="height:70%">
             <section class="addCont">
                 <h2 class="headLogin">Agregar un nuevo sencillo: </h2>
                 <p class="addP">Nombre del sencillo: </p>

@@ -12,7 +12,7 @@
                 <h4 class="AdmModHead">Modo Administrador</h4>
             </nav>
         </header>
-        <section class="mainCont">
+        <section class="mainCont" style="height:70%">
             <a href="mtAddArt.php" class="addAdm">Agregar un nuevo artista</a>
             <a href="mtAddAlb.php" class="addAdm">Agregar un nuevo album</a>
             <a href="mtAddSin.php" class="addAdm">Agregar un nuevo single</a>

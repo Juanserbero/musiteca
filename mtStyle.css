@@ -57,7 +57,7 @@ header nav ul li a:hover{
 .mainCont {
     background-color: #C3D1DA;
     width: 100%;
-    height: 40%;
+    height: 70%;
     margin: auto;
 
 }
@@ -95,7 +95,7 @@ header nav ul li a:hover{
 .loginCont{
     background: #213857;
     position: relative;
-    top:1%;
+    top:10%;
     width: 28%;
     margin-left: 30%;
     padding-bottom: 40px;

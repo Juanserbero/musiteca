@@ -12,7 +12,7 @@
                 <h4 class="AdmModHead">Modo Administrador</h4>
             </nav>
         </header>
-        <section class="mainCont" >
+        <section class="mainCont" style="height:70%">
             <form class="addCont" action="./php/artista_add.php" method="post">
                 <h2 class="headLogin">Agregar un nuevo artista: </h2>
                 <p class="addP">Nombre artistico: </p>

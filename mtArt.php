@@ -31,10 +31,9 @@ try {
                 <li><a href='mtAlb.php'>Album</a></li>
                 <li><a href='mtGen.php'>Género</a></li>
             </ul>
-            <input type="text" placeholder="Buscar..." class="search">
         </nav>
     </header>
-    <section class="mainCont">
+    <section class="mainCont" style="height:70%">
         <section class="lat">
             <aside>
                 <h2 class="head2">Artistas</h2>

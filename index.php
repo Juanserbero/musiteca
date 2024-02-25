@@ -19,10 +19,9 @@
                     <li><a href='mtAlb.php'>Album</a></li>
                     <li><a href='mtGen.php'>Género</a></li>
                 </ul>
-                <input type="text" placeholder="Buscar..." class="search">
             </nav>
         </header>
-        <section class="mainCont">
+        <section class="mainCont" style="height:70%">
                 <h2 class="head2">¡Bienvenido a Musiteca!</h2>
                 <p class="present">Aquí encontrarás información relevante acerca de tu música</p>
                 <p class="present">favorita: datos tanto biográficos como musicales</p>

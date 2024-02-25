@@ -29,7 +29,7 @@ try {
             <h4 class="AdmModHead">Modo Administrador</h4>
         </nav>
     </header>
-    <section class="mainCont">
+    <section class="mainCont" style="height:70%">
         <form class="addCont" action="./php/album_add.php" method="post">
             <h2 class="headLogin">Agregar un nuevo album: </h2>
             <p class="addP">Nombre del album: </p>

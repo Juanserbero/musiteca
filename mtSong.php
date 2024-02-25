@@ -18,8 +18,25 @@
             </nav>
         </header>
         <section class="mainCont" style="height:70%">
-            <h2>Géneros:</h2>
+            <section class="lat">
+                <aside>
+                    <h2 class="head2">Canciones del álbum</h2>
+                </aside>
+            </section>
+            <section class="albCont">
+                <h3 class="headSelect">Canción X</h3>
 
+                <p id="nombreCancion" style="margin:2%"></p>
+                <p id="generoCancion" style="margin:2%"></p>
+                <p id="fechaCancion" style="margin:2%"></p>
+                <p id="tonoCancion" style="margin:2%"></p>
+                <p id="descripcionCancion" style="margin:2%"></p>
+
+                <!--Si hace falta solo descomenta esta linea
+                <p id="artistaCancion" style="margin:2%"></p>
+                -->
+
+            </section>
         </section>
         <footer>
             <a href="#" class="SetOrAdm">Ajustes</a>

@@ -12,8 +12,8 @@
                 
             </nav>
         </header>
-        <section class="mainCont">
-            <section class="loginCont">
+        <section class="mainCont" style="height:70%">
+            <section class="loginCont" style="position:relative; top:10%">
                 <h2 class="headAdd">Iniciar sesion como administrador</h2>
                 <p class="nameLog">Nombre Administrador: </p>
                 <input type="text" class="logInputs">
