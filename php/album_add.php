@@ -31,9 +31,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             session_start();
             $_SESSION['albumId'] = $albumId;
 
-            #$id_albun = 1; //id obtenido en la consulta
-
-           
             header('Location: ../mtAddAlbSongs.php');
         } catch (PDOException $e) {
             echo "Error al agregar el usuario: " . $e->getMessage();

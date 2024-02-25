@@ -52,9 +52,15 @@ try {
                                         echo $resultado[0]['nombre'];
                                     }    ?>
             </h3>
-            <p id="fechaInicioArtista" style="margin:2%">fecha X</p>
-            <p id="paisArtista" style="margin:2%">pais X</p>
-            <p id="generoArtista" style="margin:2%">genero X</p>
+            <p id="fechaInicioArtista" style="margin:2%"><?php if ($resultado) {
+                                        echo $resultado[0]['fecha'];
+                                    }    ?></p>
+            <p id="paisArtista" style="margin:2%"><?php if ($resultado) {
+                                        echo $resultado[0]['pais'];
+                                    }    ?></p>
+            <p id="generoArtista" style="margin:2%"><?php if ($resultado) {
+                                        echo $resultado[0]['genero'];
+                                    }    ?></p>
             <p id="biografiaInicioArtista" style="margin:2%; max-width: 100% ";>biografia X</p>
         </section>
     </section>
@@ -65,18 +71,25 @@ try {
 </body>
 <script>
     function loadArt(id) {
+    var xhttp = new XMLHttpRequest();
 
-        
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("chapter-content").innerHTML = this.responseText;
-                document.getElementById("nombreArtista").innerHTML = nombre;
-            }
-        };
-        xhttp.open("GET", "./php/get_chapter_content.php?id_capitulo=" + id_capitulo, true);
-        xhttp.send();
-    }
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            // Parsear la respuesta JSON
+            var response = JSON.parse(this.responseText);
+            
+            // Actualizar los elementos HTML con los datos del artista
+            document.getElementById("nombreArtista").innerHTML = response.nombre;
+            document.getElementById("fechaInicioArtista").innerHTML = response.fecha;
+            document.getElementById("paisArtista").innerHTML = response.pais;
+            document.getElementById("generoArtista").innerHTML = response.genero;
+        }
+    };
+
+    xhttp.open("GET", "./php/artista_show.php?id=" + id, true);
+    xhttp.send();
+}
+
 </script>
 
 </html>
