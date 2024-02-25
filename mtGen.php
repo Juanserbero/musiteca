@@ -22,8 +22,7 @@
 
         </section>
         <footer>
-            <a href="#" class="SetOrAdm">Ajustes</a>
-            <a href="mtLogin.php" class="SetOrAdm">Administrador</a>
+            <a href="index.php" class="SetOrAdm">Volver</a>
         </footer>
     </body>
 </html>

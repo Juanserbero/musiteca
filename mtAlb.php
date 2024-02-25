@@ -39,7 +39,8 @@ try {
                     
                     <?php foreach ($resultado as $r) : ?>
                     <div class="chapter flex" style="align-items: center;">
-                        <h4 class="listElem" onclick="loadAlb(<?php echo $r['id']; ?>)" style="flex-grow: 1; cursor: pointer; background: white; margin:2%; padding:3px;border: #001834 solid 2px;"><?php echo $r['nombre']; ?></h4>
+                        <h4 class="listElem" onclick="loadAlb(<?php echo $r['id']; ?>)" style="flex-grow: 1; cursor: pointer; background: white; margin:2%; padding:3px;border: #001834 solid 2px;"><?php echo $r['nombre']; ?>
+                        <a style="float:right; background-color:#001834; color: white;padding:1px">Eliminar</a><a style="float:right; margin-right:5px;  background-color:#001834; color: white;padding:1px">Editar</a></h4>
                     </div>
                     <?php endforeach ?>
 
@@ -61,15 +62,15 @@ try {
                                         echo $resultado[0]['tipo'];
                                     }    ?></p>
 
-                <!-- LISTA DE CANCIONES DEL áLBUM -->
-
-                <!--Esta primera cancion tiene un link hacia la vista cancion, es solo para q puedas acceder a esa pagina por ahora-->
-                <a href="mtSong.php" id="song1" style="margin:2%">Cancion 1 prueba para acceder a vista Cancion</a>
+                
             </section>
+            <section id="cancionesDelAlbum" style="height:100%;width:40%; position:relative; left:60%; background-color:#89A1C5">
+            <h2 style="position:relative; bottom:98%; left:2%; color:#001834">Canciones de este álbum</h2>
+            <a href="mtSong.php" id="song1" style="margin:2%; position:relative; bottom:93.5%; text-decoration:none; color:#001834; background-color: white;padding:1%;border: #001834 solid 2px">Cancion 1 prueba para acceder a vista Cancion</a>
+        </section>
         </section>
         <footer>
-            <a href="#" class="SetOrAdm">Ajustes</a>
-            <a href="mtLogin.php" class="SetOrAdm">Administrador</a>
+            <a href="index.php" class="SetOrAdm">Volver</a>
         </footer>
     </body>
     <script>

@@ -13,9 +13,8 @@
             </nav>
         </header>
         <section class="mainCont" style="height:70%">
-            <a href="mtAddArt.php" class="addAdm">Agregar un nuevo artista</a>
-            <a href="mtAddAlb.php" class="addAdm">Agregar un nuevo album</a>
-            <a href="mtAddSin.php" class="addAdm">Agregar un nuevo single</a>
+            <a href="mtAddArt.php" class="addAdm" style="position:relative; top:40%; left:10%">Agregar un nuevo artista</a>
+            <a href="mtAddAlb.php" class="addAdm" style="position:relative; top:40%; left:20%">Agregar un nuevo album</a>
 
             <!-- Links de Editar Tuplas
 
@@ -33,8 +32,7 @@
 
         </section>
         <footer>
-            <a href="#" class="SetOrAdm">Ajustes</a>
-            <a href="index.php" class="SetOrAdm">Salir del Modo Administrador</a>
+            <a href="index.php" class="SetOrAdm">Volver</a>
         </footer>
     </body>
 </html>

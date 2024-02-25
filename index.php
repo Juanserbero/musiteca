@@ -29,8 +29,7 @@
                 <p class="present">sobre tus álbumes preferidos y las canciones que los componen.</p> 
         </section>
         <footer>
-            <a href="#" class="SetOrAdm">Ajustes</a>
-            <a href="mtLogin.php" class="SetOrAdm">Administrador</a>
+            <a href="mtAdmin.php" class="SetOrAdm">Añadir</a>
         </footer>
     </body>
 </html>

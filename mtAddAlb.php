@@ -51,10 +51,8 @@ try {
         </form>
     </section>
     <footer>
-        <a href="#" class="SetOrAdm">Ajustes</a>
-        <a href="index.php" class="SetOrAdm">Salir del Modo Administrador</a>
+        <a href="index.php" class="SetOrAdm">Página principal</a>
         <a href="mtAdmin.php" class="SetOrAdm">Volver</a>
     </footer>
 </body>
-
 </html>
