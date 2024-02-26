@@ -41,7 +41,10 @@ try {
                 <?php foreach ($resultado as $r) : ?>
                     <div class="chapter flex" style="align-items: center;">
                         <h4 class="listElem" onclick="loadArt(<?php echo $r['id']; ?>)" style="flex-grow: 1; cursor: pointer; background: white; margin:2%; padding:3px;border: #001834 solid 2px;"><?php echo $r['nombre']; ?>
-                        <a href="php/artista_delete.php?delete_id=<?php echo $r['id_genero']; ?>" onclick="return confirm('Esta seguro de eliminar el género?')" style="float:right; background-color:#001834; color: white;padding:1px">Eliminar</a><a style="float:right; margin-right:5px;  background-color:#001834; color: white;padding:1px">Editar</a></h4>
+                        <a href="php/artista_delete.php?delete_id=<?php echo $r['id_genero']; ?>" 
+                        onclick="return confirm('Esta seguro de eliminar el género?')" 
+                        style="float:right; background-color:#001834; color: white;padding:1px">Eliminar</a>
+                        <a style="float:right; margin-right:5px;  background-color:#001834; color: white;padding:1px">Editar</a></h4>
                     </div>
                 <?php endforeach ?>
 
@@ -65,7 +68,7 @@ try {
         </section>
         <section id="albumesDelArtista" style="height:100%;width:40%; position:relative; left:60%; background-color:#89A1C5">
                 <h2 style="position:relative; bottom:98%; left:2%; color:#001834">Albumes de este artista</h2>
-                    <div id="album-container">
+                    <div id="album-container" style="position:relative; bottom:92%" >
                         
                     </div>
         </section>
@@ -119,6 +122,7 @@ function loadAlbums(artista_id) {
                 albumLink.style.position = "relative";
                 albumLink.style.bottom = "93.5%";
                 albumLink.style.textDecoration = "none";
+                albumLink.style.display = "grid";
                 albumLink.style.color = "#001834";
                 albumLink.style.backgroundColor = "white";
                 albumLink.style.padding = "1%";
