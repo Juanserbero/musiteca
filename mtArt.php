@@ -65,12 +65,12 @@ try {
         </section>
         <section id="albumesDelArtista" style="height:100%;width:40%; position:relative; left:60%; background-color:#89A1C5">
                 <h2 style="position:relative; bottom:98%; left:2%; color:#001834">Albumes de este artista</h2>
-                <div id="album-container">
-                    
-                </div>
-            </section>
+                    <div id="album-container">
+                        
+                    </div>
+        </section>
 
-    </section>
+        </section>
     <footer>
         <a href="index.php" class="SetOrAdm">Volver</a>
     </footer>
@@ -123,7 +123,7 @@ function loadAlbums(artista_id) {
                 albumLink.style.backgroundColor = "white";
                 albumLink.style.padding = "1%";
                 albumLink.style.border = "#001834 solid 2px";
-                albumLink.style.paddingRight = "60%";
+                albumLink.style.paddingRight = "40%";
                 albumLink.textContent = album.nombre; // Establecer el texto del enlace
 
                 // Añadir el enlace del álbum al contenedor
