@@ -7,7 +7,7 @@ $id = $_GET['id'];
 
 try {
     // Construir la consulta SQL utilizando parámetros preparados para evitar inyección SQL
-    $sql = "SELECT id, nombre, fecha, duracion, tipo FROM album WHERE id = :id";
+    $sql = "SELECT id, nombre, fecha, duracion, descripcion, tipo FROM album WHERE id = :id";
 
     // Preparar la consulta
     $stmt = $pdo->prepare($sql);
@@ -23,7 +23,7 @@ try {
 
     // Verificar si se encontraron resultados
     if ($row) {
-        // Devolver los datos del artista en formato JSON
+        // Devolver los datos del album en formato JSON
         echo json_encode($row);
     } else {
         echo "Album no encontrado";

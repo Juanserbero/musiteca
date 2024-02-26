@@ -2,7 +2,7 @@
 include './php/conexion.php';
 try {
     // Consulta para obtener los libros de la tabla 'album'
-    $sql_leer = 'SELECT id, nombre, fecha, duracion, tipo FROM album;';
+    $sql_leer = 'SELECT id, nombre, fecha, duracion, descripcion, tipo FROM album;';
     $gsent = $pdo->prepare($sql_leer);
     $gsent->execute();
     $resultado = $gsent->fetchAll(PDO::FETCH_ASSOC);
@@ -40,7 +40,10 @@ try {
                     <?php foreach ($resultado as $r) : ?>
                     <div class="chapter flex" style="align-items: center;">
                         <h4 class="listElem" onclick="loadAlb(<?php echo $r['id']; ?>)" style="flex-grow: 1; cursor: pointer; background: white; margin:2%; padding:3px;border: #001834 solid 2px;"><?php echo $r['nombre']; ?>
-                        <a style="float:right; background-color:#001834; color: white;padding:1px">Eliminar</a><a style="float:right; margin-right:5px;  background-color:#001834; color: white;padding:1px">Editar</a></h4>
+                        <a href="php/album_delete.php?delete_id=<?php echo $r['id']; ?>" 
+                        onclick="return confirm('Esta seguro de eliminar el género?')" 
+                        style="float:right; background-color:#001834; color: white;padding:1px">Eliminar</a>
+                        <a style="float:right; margin-right:5px;  background-color:#001834; color: white;padding:1px">Editar</a></h4>
                     </div>
                     <?php endforeach ?>
 
@@ -61,6 +64,9 @@ try {
                 <p id="tipoDeAlbum" style="margin:2%"><?php if ($resultado) {
                                         echo $resultado[0]['tipo'];
                                     }    ?></p>
+                <p id="descripcionDeAlbum" style="margin:2%"><?php if ($resultado) {
+                                        echo $resultado[0]['descripcion'];
+                                    }    ?></p>                    
 
                 
             </section>
@@ -89,6 +95,8 @@ try {
             document.getElementById("fechaDelAlbum").innerHTML = response.fecha;
             document.getElementById("duracionDelAlbum").innerHTML = response.duracion;
             document.getElementById("tipoDeAlbum").innerHTML = response.tipo;
+            document.getElementById("descripcionDeAlbum").innerHTML = response.descripcion;
+            
         }
     };
 

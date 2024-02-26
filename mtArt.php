@@ -2,7 +2,7 @@
 include './php/conexion.php';
 try {
     // Consulta para obtener los libros de la tabla 'artista'
-    $sql_leer = 'SELECT id, nombre, fecha, pais, genero FROM artista;';
+    $sql_leer = 'SELECT id, nombre, fecha, pais, genero, biografia FROM artista;';
     $gsent = $pdo->prepare($sql_leer);
     $gsent->execute();
     $resultado = $gsent->fetchAll(PDO::FETCH_ASSOC);
@@ -39,14 +39,14 @@ try {
                 <h2 class="head2">Artistas</h2>
 
                 <?php foreach ($resultado as $r) : ?>
-                    <div class="chapter flex" style="align-items: center;">
-                        <h4 class="listElem" onclick="loadArt(<?php echo $r['id']; ?>)" style="flex-grow: 1; cursor: pointer; background: white; margin:2%; padding:3px;border: #001834 solid 2px;"><?php echo $r['nombre']; ?>
-                        <a href="php/artista_delete.php?delete_id=<?php echo $r['id_genero']; ?>" 
-                        onclick="return confirm('Esta seguro de eliminar el género?')" 
-                        style="float:right; background-color:#001834; color: white;padding:1px">Eliminar</a>
-                        <a style="float:right; margin-right:5px;  background-color:#001834; color: white;padding:1px">Editar</a></h4>
-                    </div>
-                <?php endforeach ?>
+  <div class="chapter flex" style="align-items: center;">
+    <h4 class="listElem" onclick="loadArt(<?php echo $r['id']; ?>)" style="flex-grow: 1; cursor: pointer; background: white; margin:2%; padding:3px;border: #001834 solid 2px;"><?php echo $r['nombre']; ?>
+      <a href="php/artista_delete.php?delete_id=<?php echo $r['id']; ?>" onclick="return confirm('Esta seguro de eliminar el género?')" style="float:right; background-color:#001834; color: white;padding:1px">Eliminar</a>
+      <a href="./mtAddArt.php?id=<?php echo $r['id']; ?>" style="float:right; margin-right:5px;  background-color:#001834; color: white;padding:1px">Editar</a>
+    </h4>
+  </div>
+<?php endforeach ?>
+
 
             </aside>
         </section>
@@ -64,7 +64,9 @@ try {
             <p id="generoArtista" style="margin:2%"><?php if ($resultado) {
                                         echo $resultado[0]['genero'];
                                     }    ?></p>
-            <p id="biografiaInicioArtista" style="margin:2%; max-width: 100% ";>biografia X</p>
+            <p id="biografiaInicioArtista" style="margin:2%; max-width: 100% ";><?php if ($resultado) {
+                                        echo $resultado[0]['biografia'];
+                                    }    ?></p>
         </section>
         <section id="albumesDelArtista" style="height:100%;width:40%; position:relative; left:60%; background-color:#89A1C5">
                 <h2 style="position:relative; bottom:98%; left:2%; color:#001834">Albumes de este artista</h2>
@@ -92,6 +94,8 @@ try {
             document.getElementById("fechaInicioArtista").innerHTML = response.fecha;
             document.getElementById("paisArtista").innerHTML = response.pais;
             document.getElementById("generoArtista").innerHTML = response.genero;
+            document.getElementById("biografiaInicioArtista").innerHTML = response.biografia;
+
         }
     };
 

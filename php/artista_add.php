@@ -9,21 +9,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fecha = $_POST["fecha"];
     $pais = $_POST["pais"];
     $genero = $_POST["genero"];
+    $biografia = $_POST["biografia"];
 
-    // Función para agregar un usuario a la base de datos
-    function agregarUsuario($nombre, $fecha, $pais, $genero, $pdo)
+
+    // Función para agregar un artista a la base de datos
+    function agregarArtista($nombre, $fecha, $pais, $genero, $biografia, $pdo)
     {
         try {
-            // Preparar la consulta SQL para insertar el usuario
-            $sql = "INSERT INTO artista (nombre, fecha, pais, genero) VALUES (?, ?, ?, ?)";
+            // Preparar la consulta SQL para insertar el artista
+            $sql = "INSERT INTO artista (nombre, fecha, pais, genero, biografia) VALUES (?, ?, ?, ?, ?)";
             $stmt = $pdo->prepare($sql);
 
             // Ejecutar la consulta SQL preparada
-            $stmt->execute([$nombre, $fecha, $pais, $genero]);
+            $stmt->execute([$nombre, $fecha, $pais, $genero, $biografia]);
 
-            echo "Usuario agregado exitosamente.";
+            echo "Artista agregado exitosamente.";
         } catch (PDOException $e) {
-            echo "Error al agregar el usuario: " . $e->getMessage();
+            echo "Error al agregar el Artista: " . $e->getMessage();
         }
     }
 
@@ -33,8 +35,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    // Llamar a la función para agregar el usuario
-    agregarUsuario($nombre, $fecha, $pais, $genero, $pdo);
+    // Llamar a la función para agregar el artista
+    agregarArtista($nombre, $fecha, $pais, $genero, $biografia, $pdo);
 }
 
 
