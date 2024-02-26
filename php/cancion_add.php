@@ -4,27 +4,28 @@ session_start();
 
 
 // Verificar si se han recibido los datos del formulario
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_SESSION['albumId'])) {
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_SESSION['album_id'])) {
     // Obtener los datos del formulario
+    $id = $_POST["id"];
     $nombre = $_POST["nombre"];
     $duracion = $_POST["duracion"];
     $genero = $_POST["genero"];
     $tono = $_POST["tono"];
     $letra = $_POST["letra"];
     $descripcion = $_POST["descripcion"];
-    $albumId =  $_SESSION['albumId'];
+    $album_id =  $_SESSION['album_id'];
 
 
     // Función para agregar un usuario a la base de datos
-    function agregarUsuario($nombre, $duracion, $genero, $tono, $letra, $descripcion, $albumId, $pdo)
+    function agregarUsuario($id, $nombre, $duracion, $genero, $tono, $letra, $descripcion, $album_id, $pdo)
     {
         try {
             // Preparar la consulta SQL para insertar el usuario
-            $sql = "INSERT INTO cancion (nombre, duracion, genero, tono, letra, descripcion, album_id) VALUES (?, ?, ?, ?, ?, ?, ?)";
+            $sql = "INSERT INTO cancion (id, nombre, duracion, genero, tono, letra, descripcion, album_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
             $stmt = $pdo->prepare($sql);
 
             // Ejecutar la consulta SQL preparada
-            $stmt->execute([$nombre, $duracion, $genero, $tono, $letra, $descripcion, $albumId]);
+            $stmt->execute([$id, $nombre, $duracion, $genero, $tono, $letra, $descripcion, $album_id]);
 
             echo "Cancion agregado exitosamente.";
             header('Location: ../mtAddAlbSongs.php');
@@ -40,5 +41,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_SESSION['albumId'])) {
     }
 
     // Llamar a la función para agregar el usuario
-    agregarUsuario($nombre, $duracion, $genero, $tono, $letra, $descripcion, $albumId, $pdo);
+    agregarUsuario($id, $nombre, $duracion, $genero, $tono, $letra, $descripcion, $album_id, $pdo);
 }

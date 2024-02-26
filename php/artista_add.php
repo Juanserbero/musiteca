@@ -36,3 +36,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Llamar a la función para agregar el usuario
     agregarUsuario($nombre, $fecha, $pais, $genero, $pdo);
 }
+
+

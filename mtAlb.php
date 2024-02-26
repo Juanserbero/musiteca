@@ -66,7 +66,9 @@ try {
             </section>
             <section id="cancionesDelAlbum" style="height:100%;width:40%; position:relative; left:60%; background-color:#89A1C5">
             <h2 style="position:relative; bottom:98%; left:2%; color:#001834">Canciones de este álbum</h2>
-            <a href="mtSong.php" id="song1" style="margin:2%; position:relative; bottom:93.5%; text-decoration:none; color:#001834; background-color: white;padding:1%;border: #001834 solid 2px">Cancion 1 prueba para acceder a vista Cancion</a>
+            <div id="songs-container">
+                    
+            </div>
         </section>
         </section>
         <footer>
@@ -76,7 +78,7 @@ try {
     <script>
     function loadAlb(id) {
     var xhttp = new XMLHttpRequest();
-
+    loadSongs(id)
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             // Parsear la respuesta JSON
@@ -93,5 +95,50 @@ try {
     xhttp.open("GET", "./php/album_show.php?id=" + id, true);
     xhttp.send();
 }
+
+function loadSongs(album_id) {
+    var xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            // Parsear la respuesta JSON
+            var songs = JSON.parse(this.responseText);
+            
+            // Limpiar el contenido del contenedor de álbumes
+            var songsContainer = document.getElementById("songs-container");
+            songsContainer.innerHTML = ''; // Limpiar contenido existente
+
+            // Procesar los álbumes obtenidos y añadirlos al contenedor
+            songs.forEach(function(songs) {
+                // Crear un elemento <a> para cada álbum y configurar sus atributos
+                var songsLink = document.createElement("a");
+                songsLink.href = "mtSong.php"; // Cambiar la URL si es necesario
+                songsLink.id = "songs-" + songs.id; // Asignar un ID único si es necesario
+                songsLink.style.margin = "2%";
+                songsLink.style.position = "relative";
+                songsLink.style.bottom = "93.5%";
+                songsLink.style.textDecoration = "none";
+                songsLink.style.color = "#001834";
+                songsLink.style.backgroundColor = "white";
+                songsLink.style.padding = "1%";
+                songsLink.style.border = "#001834 solid 2px";
+                songsLink.style.paddingRight = "60%";
+                songsLink.textContent = songs.nombre; // Establecer el texto del enlace
+
+                // Añadir el enlace del álbum al contenedor
+                songsContainer.appendChild(songsLink);
+            });
+        }
+    };
+
+    // Construir la URL de la solicitud AJAX
+    var url = "./php/album_songs_show.php?album_id=" + album_id;
+
+    xhttp.open("GET", url, true);
+    xhttp.send();
+}
+window.addEventListener('load', function() {
+        loadSongs(<?php echo $resultado[0]['id']?>)
+    });
 </script>                                
 </html>

@@ -26,10 +26,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $sql1 = "SELECT max(id) from album";
             $stmt1 = $pdo->prepare($sql1);
             $stmt1->execute([]);
-            $albumId = $stmt1->fetchColumn();
+            $album_id = $stmt1->fetchColumn();
 
             session_start();
-            $_SESSION['albumId'] = $albumId;
+            $_SESSION['album_id'] = $album_id;
 
             header('Location: ../mtAddAlbSongs.php');
         } catch (PDOException $e) {

@@ -18,7 +18,7 @@
                 <p class="addP">Nombre: </p>
                 <input type="text" class="addInputs" name="nombre">
                 <p class="addP">Número de canción: </p>
-                <input type="text" class="addInputs" name="numero">
+                <input type="text" class="addInputs" name="id">
                 <p class="addP">Duración: </p>
                 <input type="text" class="addInputs" name="duracion">
                 <p class="addP">Género: </p>
