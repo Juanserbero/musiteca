@@ -72,7 +72,7 @@ try {
             </section>
             <section id="cancionesDelAlbum" style="height:100%;width:40%; position:relative; left:60%; background-color:#89A1C5">
             <h2 style="position:relative; bottom:98%; left:2%; color:#001834">Canciones de este álbum</h2>
-            <div id="songs-container">
+            <div id="songs-container" style="position:relative; bottom:98%; left:2%">
                     
             </div>
         </section>
@@ -127,10 +127,11 @@ function loadSongs(album_id) {
                 songsLink.style.bottom = "93.5%";
                 songsLink.style.textDecoration = "none";
                 songsLink.style.color = "#001834";
+                songsLink.style.display = "grid";
                 songsLink.style.backgroundColor = "white";
                 songsLink.style.padding = "1%";
                 songsLink.style.border = "#001834 solid 2px";
-                songsLink.style.paddingRight = "60%";
+                songsLink.style.paddingRight = "40%";
                 songsLink.textContent = songs.nombre; // Establecer el texto del enlace
 
                 // Añadir el enlace del álbum al contenedor

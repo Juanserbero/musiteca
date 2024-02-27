@@ -46,6 +46,8 @@ try {
             <input type="text" class="addInputs" name = "duracion">
             <p class="addP">Tipo de album:</p>
             <input type="text" class="addInputs" name = "tipo">
+            <p class="addP">Descripción: </p>
+            <textarea cols="30" rows="2" class="addInputs" name="descripcion" value="<?php echo $res['descripcion'] ?>"></textarea>
             <br><br>
             <input type="submit" class="logSubmit" style="margin-left:24%" value="Guardar y agregar canciones">
         </form>

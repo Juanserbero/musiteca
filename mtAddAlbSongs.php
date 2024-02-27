@@ -18,17 +18,6 @@
                 <p class="addP">Nombre: </p>
                 <input type="text" class="addInputs" name="nombre">
                 <p class="addP">Número de canción: </p>
-                <input type="text" class="addInputs" name="id">
-                <p class="addP">Duración: </p>
-                <input type="text" class="addInputs" name="duracion">
-                <p class="addP">Género: </p>
-                <input type="text" class="addInputs" name="genero">
-                <p class="addP">Tonalidad: </p>
-                <input type="text" class="addInputs" name="tono">
-                <p class="addP">Letra: </p>
-                <textarea cols="30" rows="2" class="addInputs"></textarea>
-                <p class="addP">Descripción: </p>
-                <input type="text" class="addInputs" name="descripcion">
                 <br><br>
                 <input type="submit" class="logSubmit" value="Guardar y otra">
                 <a href="mtAdmin.php" class="logSubmit" style="margin:2%; margin-left: 18%; font-size:14px">Finalizar</a>
