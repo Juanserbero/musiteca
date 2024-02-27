@@ -29,7 +29,6 @@ try {
                 <li><a href='index.php'>Inicio</a></li>
                 <li><a href='mtArt.php'>Artista</a></li>
                 <li><a href='mtAlb.php'>Album</a></li>
-                <li><a href='mtGen.php'>Género</a></li>
             </ul>
         </nav>
     </header>
@@ -41,7 +40,7 @@ try {
                 <?php foreach ($resultado as $r) : ?>
   <div class="chapter flex" style="align-items: center;">
     <h4 class="listElem" onclick="loadArt(<?php echo $r['id']; ?>)" style="flex-grow: 1; cursor: pointer; background: white; margin:2%; padding:3px;border: #001834 solid 2px;"><?php echo $r['nombre']; ?>
-      <a href="php/artista_delete.php?delete_id=<?php echo $r['id']; ?>" onclick="return confirm('Esta seguro de eliminar el género?')" style="float:right; background-color:#001834; color: white;padding:1px">Eliminar</a>
+      <a href="php/artista_delete.php?delete_id=<?php echo $r['id']; ?>" onclick="return confirm('Esta seguro de eliminar el artista?')" style="float:right; background-color:#001834; color: white;padding:1px">Eliminar</a>
       <a href="./mtAddArt.php?id=<?php echo $r['id']; ?>" style="float:right; margin-right:5px;  background-color:#001834; color: white;padding:1px">Editar</a>
     </h4>
   </div>
@@ -70,14 +69,14 @@ try {
         </section>
         <section id="albumesDelArtista" style="height:100%;width:40%; position:relative; left:60%; background-color:#89A1C5">
                 <h2 style="position:relative; bottom:98%; left:2%; color:#001834">Albumes de este artista</h2>
-                    <div id="album-container" style="position:relative; bottom:92%" >
+                    <div id="album-container" style="position:relative; bottom:98%" >
                         
                     </div>
         </section>
 
         </section>
     <footer>
-        <a href="index.php" class="SetOrAdm">Volver</a>
+        <a href="mtAddArt.php" class="SetOrAdm">Añadir artista</a>
     </footer>
 </body>
 <script>
@@ -119,8 +118,7 @@ function loadAlbums(artista_id) {
             // Procesar los álbumes obtenidos y añadirlos al contenedor
             albums.forEach(function(album) {
                 // Crear un elemento <a> para cada álbum y configurar sus atributos
-                var albumLink = document.createElement("a");
-                albumLink.href = "mtSong.php"; // Cambiar la URL si es necesario
+                var albumLink = document.createElement("p");
                 albumLink.id = "album-" + album.id; // Asignar un ID único si es necesario
                 albumLink.style.margin = "2%";
                 albumLink.style.position = "relative";

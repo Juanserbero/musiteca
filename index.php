@@ -17,7 +17,6 @@
                     <li><a href='index.php'>Inicio</a></li>  
                     <li><a href='mtArt.php'>Artista</a></li>
                     <li><a href='mtAlb.php'>Album</a></li>
-                    <li><a href='mtGen.php'>Género</a></li>
                 </ul>
             </nav>
         </header>
@@ -29,7 +28,7 @@
                 <p class="present">sobre tus álbumes preferidos y las canciones que los componen.</p> 
         </section>
         <footer>
-            <a href="mtAdmin.php" class="SetOrAdm">Añadir</a>
+
         </footer>
     </body>
 </html>

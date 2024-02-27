@@ -31,7 +31,11 @@ if ($_GET) {
     <header>
         <h1 class="head1">MUSITECA</h1>
         <nav>
-            <h4 class="AdmModHead">Modo Administrador</h4>
+        <ul>
+                <li><a href='index.php'>Inicio</a></li>
+                <li><a href='mtArt.php'>Artista</a></li>
+                <li><a href='mtAlb.php'>Album</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -80,8 +84,6 @@ if ($_GET) {
 
     </section>
     <footer>
-        <a href="index.php" class="SetOrAdm">Página principal</a>
-        <a href="mtAdmin.php" class="SetOrAdm">Volver</a>
     </footer>
 </body>
 

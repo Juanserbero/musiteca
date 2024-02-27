@@ -28,7 +28,6 @@ try {
                     <li><a href='index.php'>Inicio</a></li>
                     <li><a href='mtArt.php'>Artista</a></li>
                     <li><a href='mtAlb.php'>Album</a></li>
-                    <li><a href='mtGen.php'>Género</a></li>
                 </ul>
             </nav>
         </header>
@@ -78,7 +77,7 @@ try {
         </section>
         </section>
         <footer>
-            <a href="index.php" class="SetOrAdm">Volver</a>
+            <a href="mtAddAlb.php" class="SetOrAdm">Añadir álbum</a>
         </footer>
     </body>
     <script>
@@ -119,8 +118,7 @@ function loadSongs(album_id) {
             // Procesar los álbumes obtenidos y añadirlos al contenedor
             songs.forEach(function(songs) {
                 // Crear un elemento <a> para cada álbum y configurar sus atributos
-                var songsLink = document.createElement("a");
-                songsLink.href = "mtSong.php"; // Cambiar la URL si es necesario
+                var songsLink = document.createElement("p");
                 songsLink.id = "songs-" + songs.id; // Asignar un ID único si es necesario
                 songsLink.style.margin = "2%";
                 songsLink.style.position = "relative";
