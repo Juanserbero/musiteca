@@ -1,42 +1,33 @@
+
 <?php
+include './php/conexion.php';
+ try {
+    // Consulta para obtener todos los artistas y sus detalles
+    $sql_leer = 'SELECT id, nombre FROM artista';
+    $gsent = $pdo->prepare($sql_leer);
+    $gsent->execute();
+    $resultado = $gsent->fetchAll(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    echo "Error: " . $e->getMessage();
+    exit;
+}
 
 if ($_GET) {
 
-    include './php/conexion.php';
-    // Definir el ID del artista que quieres obtener
+    // Definir el ID del album que quieres obtener
     $id = $_GET['id'];
 
 
     try {
-        $sql = "SELECT id, nombre, fecha, pais, genero, biografia FROM artista WHERE id = ?";
+        $sql = "SELECT id, nombre, fecha, duracion, tipo, descripcion FROM album WHERE id = ?";
         $stmt = $pdo->prepare($sql);
         $stmt->execute([$id]);
         $res = $stmt->fetch(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
-        echo "Error al obtener el artista: " . $e->getMessage();
+        echo "Error al obtener el album: " . $e->getMessage();
     }
 }
 ?>
-
-
-<!-- Este codigo es el antiguo php q tenia esto
-
-    <<!?php
-    include_once './php/conexion.php';
-
-    try {
-        // Consulta para obtener todos los artistas y sus detalles
-        $sql_leer = 'SELECT id, nombre FROM artista';
-        $gsent = $pdo->prepare($sql_leer);
-        $gsent->execute();
-        $resultado = $gsent->fetchAll(PDO::FETCH_ASSOC);
-    } catch (PDOException $e) {
-        echo "Error: " . $e->getMessage();
-        exit;
-    }
-    ?>
-
--->
 
 <html>
 
@@ -93,7 +84,7 @@ if ($_GET) {
 
         <?php if ($_GET) : ?>
 
-        <form class="addCont" action="./php/album_add.php" method="post">
+        <form class="addCont" action="./php/album_edit.php" method="post">
             <h2 class="headLogin">Edite el álbum: </h2>
             <p class="addP">Nombre del album: </p>
             <input type="text" class="addInputs" name = "nombre">
@@ -110,7 +101,7 @@ if ($_GET) {
             <p class="addP">Tipo de album:</p>
             <input type="text" class="addInputs" name = "tipo">
             <p class="addP">Descripción: </p>
-            <textarea cols="30" rows="2" class="addInputs" name="descripcion" value="<?php echo $res['descripcion'] ?>"></textarea>
+            <textarea cols="30" rows="2" class="addInputs" name="descripcion" ><?php echo $res['descripcion'] ?></textarea>
             <br><br>
             <input type="submit" class="logSubmit" style="margin-left:24%" value="Guardar y agregar canciones">
         </form>

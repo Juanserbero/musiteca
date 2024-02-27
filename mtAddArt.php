@@ -75,7 +75,7 @@ if ($_GET) {
                 <p class="addP">Genero musical principal: </p>
                 <input type="text" class="addInputs" name="genero" value="<?php echo $res['genero'] ?>">
                 <p class="addP">Biografía: </p>
-                <textarea cols="30" rows="2" class="addInputs" name="biografia" value="<?php echo $res['biografia'] ?>"></textarea>
+                <textarea cols="30" rows="2" class="addInputs" name="biografia" ><?php echo $res['biografia'] ?></textarea>
                 <br><br>
                 <input type="submit" class="logSubmit" value="Guardar">
             </form>

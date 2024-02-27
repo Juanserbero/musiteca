@@ -9,18 +9,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fecha = $_POST["fecha"];
     $duracion = $_POST["duracion"];
     $tipo = $_POST["tipo"];
+    $descripcion = $_POST["descripcion"];
     $artista_id = $_POST["artista_id"];
 
     // Función para agregar un usuario a la base de datos
-    function agregarUsuario($nombre, $fecha, $duracion, $tipo, $artista_id, $pdo)
+    function agregarUsuario($nombre, $fecha, $duracion, $tipo, $descripcion, $artista_id, $pdo)
     {
         try {
             // Preparar la consulta SQL para insertar el usuario
-            $sql = "INSERT INTO album (nombre, fecha, duracion, tipo, artista_id) VALUES (?, ?, ?, ?, ?);";
+            $sql = "INSERT INTO album (nombre, fecha, duracion, tipo, descripcion, artista_id) VALUES (?, ?, ?, ?, ?, ?);";
             $stmt = $pdo->prepare($sql);
 
             // Ejecutar la consulta SQL preparada
-            $stmt->execute([$nombre, $fecha, $duracion, $tipo, $artista_id]);
+            $stmt->execute([$nombre, $fecha, $duracion, $tipo, $descripcion, $artista_id]);
 
             //consulata para saber el id de este albun
             $sql1 = "SELECT max(id) from album";
@@ -44,5 +45,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Llamar a la función para agregar el usuario
-    agregarUsuario($nombre, $fecha, $duracion, $tipo, $artista_id, $pdo);
+    agregarUsuario($nombre, $fecha, $duracion, $tipo, $descripcion, $artista_id, $pdo);
 }

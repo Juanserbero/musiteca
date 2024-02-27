@@ -42,7 +42,7 @@ try {
                         <a href="php/album_delete.php?delete_id=<?php echo $r['id']; ?>" 
                         onclick="return confirm('Esta seguro de eliminar el género?')" 
                         style="float:right; background-color:#001834; color: white;padding:1px">Eliminar</a>
-                        <a style="float:right; margin-right:5px;  background-color:#001834; color: white;padding:1px">Editar</a></h4>
+                        <a href="mtAddAlb.php" style="float:right; margin-right:5px;  background-color:#001834; color: white;padding:1px">Editar</a></h4>
                     </div>
                     <?php endforeach ?>
 

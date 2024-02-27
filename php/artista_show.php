@@ -7,7 +7,7 @@ $id = $_GET['id'];
 
 try {
     // Construir la consulta SQL utilizando parámetros preparados para evitar inyección SQL
-    $sql = "SELECT id, nombre, fecha, pais, genero FROM artista WHERE id = :id";
+    $sql = "SELECT id, nombre, fecha, pais, genero, biografia FROM artista WHERE id = :id";
 
     // Preparar la consulta
     $stmt = $pdo->prepare($sql);
